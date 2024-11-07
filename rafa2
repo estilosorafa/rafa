@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUBBLES with Cats</title>
+  <style>
+    /* Basic styling */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center title */
+    #title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      color: white;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Bubble container */
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0.8;
+      animation: rise 10s infinite ease-in-out;
+    }
+
+    /* Different bubble colors */
+    .bubble:nth-child(odd) { background-color: rgba(0, 255, 0, 0.4); } /* Green */
+    .bubble:nth-child(even) { background-color: rgba(255, 0, 0, 0.4); } /* Red */
+    .bubble:nth-child(3n) { background-color: rgba(0, 0, 255, 0.4); } /* Blue */
+
+    /* Bubble images */
+    .bubble:nth-child(1) { background-image: url('https://placekitten.com/80/80'); }
+    .bubble:nth-child(2) { background-image: url('https://placekitten.com/81/81'); }
+    .bubble:nth-child(3) { background-image: url('https://placekitten.com/82/82'); }
+    .bubble:nth-child(4) { background-image: url('https://placekitten.com/83/83'); }
+    .bubble:nth-child(5) { background-image: url('https://placekitten.com/84/84'); }
+    .bubble:nth-child(6) { background-image: url('https://placekitten.com/85/85'); }
+    .bubble:nth-child(7) { background-image: url('https://placekitten.com/86/86'); }
+    .bubble:nth-child(8) { background-image: url('https://placekitten.com/87/87'); }
+    .bubble:nth-child(9) { background-image: url('https://placekitten.com/88/88'); }
+    .bubble:nth-child(10) { background-image: url('https://placekitten.com/89/89'); }
+
+    /* Keyframe animation for rising bubbles */
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(-50vh) scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Different timings for each bubble */
+    .bubble:nth-child(1) { animation-delay: 0s; }
+    .bubble:nth-child(2) { animation-delay: 1s; }
+    .bubble:nth-child(3) { animation-delay: 2s; }
+    .bubble:nth-child(4) { animation-delay: 3s; }
+    .bubble:nth-child(5) { animation-delay: 4s; }
+    .bubble:nth-child(6) { animation-delay: 5s; }
+    .bubble:nth-child(7) { animation-delay: 6s; }
+    .bubble:nth-child(8) { animation-delay: 7s; }
+    .bubble:nth-child(9) { animation-delay: 8s; }
+    .bubble:nth-child(10) { animation-delay: 9s; }
+  </style>
+</head>
+<body>
+  <!-- Center title -->
+  <div id="title">BUBBLES</div>
+
+  <!-- Bubbles with cats inside -->
+  <div class="bubble" style="left: 10%;"></div>
+  <div class="bubble" style="left: 20%;"></div>
+  <div class="bubble" style="left: 30%;"></div>
+  <div class="bubble" style="left: 40%;"></div>
+  <div class="bubble" style="left: 50%;"></div>
+  <div class="bubble" style="left: 60%;"></div>
+  <div class="bubble" style="left: 70%;"></div>
+  <div class="bubble" style="left: 80%;"></div>
+  <div class="bubble" style="left: 90%;"></div>
+  <div class="bubble" style="left: 95%;"></div>
+</body>
+</html>
